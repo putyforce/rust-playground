@@ -12,5 +12,12 @@ Go to repo and run nix-shell:
 nix-shell shell.nix
 ```
 
-Now you can use `rustc` to build executables
+Go to project directory and run cargo:
+```shell
+cd project
+```
+```shell
+cargo run
+```
+
 
