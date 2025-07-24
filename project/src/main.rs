@@ -1,17 +1,22 @@
+use std::io;
+
 fn main() {
-    let x = 5;
+    let a = [1, 2, 3, 4, 5];
 
-    let x = x + 1;
+    println!("Please enter an array index.");
 
-    const Y:i32 = 69;
+    let mut index = String::new();
 
-    {
-        let x = x * 2;
-        println!("The value of x in the inner scope is: {x}");
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
 
-        println!("Does inner works like gate? Yay, Y now is: {Y}");
-    }
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
 
-    println!("The value of x is: {x}");
-    println!("The const Y is: {Y}");
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
 }
