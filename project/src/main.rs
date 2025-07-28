@@ -1,7 +1,9 @@
-fn main() {
-    print_labeled_measurement(33, 'g');
+fn five() -> i32 {
+    22
 }
 
-fn print_labeled_measurement(value: i32, unit_label: char) {
-    println!("protein scope: {value}{unit_label}");
+fn main() {
+    let x = five();
+
+    println!("smaller protein scope is: {x}");
 }
